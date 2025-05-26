@@ -1,4 +1,45 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-primary: #fece76;
+  --color-bg: #e5e8f1;
+}
+
+:root {
+  --font-be-vietnam: "Be Vietnam Pro", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+@layer utilities {
+  @keyframes caret-blink {
+    0%,
+    70%,
+    100% {
+      opacity: 1;
+    }
+    20%,
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-caret-blink {
+    animation: caret-blink 1.25s ease-out infinite;
+  }
+}
+
+body {
+  /* background-image: url(/images/bg.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover; */
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
 
 button {
   cursor: pointer !important;
@@ -6,6 +47,11 @@ button {
 
 input {
   outline: none !important;
+}
+
+input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 input,
