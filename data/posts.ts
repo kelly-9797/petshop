@@ -1,4 +1,3 @@
-// data/posts.ts
 export const posts = [
   {
     slug: "7-sai-lam-khi-cham-soc-thu-cung",

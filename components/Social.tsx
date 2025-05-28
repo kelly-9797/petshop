@@ -4,12 +4,9 @@ import Link from "next/link";
 
 export default function Social() {
   return (
-    <footer className="fixed z-10 bottom-2 lg:bottom-4 right-0 lg:right-2 bg-primary rounded-lg">
+    <div className="fixed z-10 bottom-2 lg:bottom-4 right-0 lg:right-2 bg-primary rounded-lg">
       <div className="flex flex-col justify-center gap-1 items-center p-1 lg:p-1.5">
-        <Link
-          target="_blank"
-          href="https://www.tiktok.com/@luce1220?_t=ZS-8wfWxaYkx0v&_r=1"
-        >
+        <Link target="_blank" href="https://www.tiktok.com/@harushop97">
           <svg
             className="w-14 h-14"
             xmlns="http://www.w3.org/2000/svg"
@@ -380,7 +377,7 @@ export default function Social() {
         </Link>
 
         <Link
-          href="https://www.facebook.com/share/1Y75s9db3H/?mibextid=wwXIfr"
+          href="https://www.facebook.com/profile.php?id=61576753380652"
           target="_blank"
         >
           <svg
@@ -609,6 +606,6 @@ export default function Social() {
           </svg>
         </Link>
       </div>
-    </footer>
+    </div>
   );
 }

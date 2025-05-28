@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://harupetshop.vn
+
+# Sitemaps
+Sitemap: https://harupetshop.vn/sitemap.xml

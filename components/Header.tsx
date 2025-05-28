@@ -68,7 +68,7 @@ export default function Header() {
     <>
       {showHeader && (
         <header className="container mx-auto p-4 flex flex-col items-center justify-between gap-4 lg:flex-row">
-          <Link href="/">
+          <Link className="w-fit lg:w-[231px]" href="/">
             <Image
               className="rounded-full"
               width={65}
@@ -183,7 +183,7 @@ export default function Header() {
                 </Link>
               ))}
           </div> */}
-          <div className="flex items-center gap-2">
+          <div className="w-fit lg:w-[231px] flex items-center gap-2">
             <span>Hotline:</span>
             <a
               className="bg-primary px-3 py-1.5 rounded flex items-center gap-1"

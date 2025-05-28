@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { posts } from "data/post";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+
+import { posts } from "data/posts";
 
 export const generateMetadata = async ({
   params,
@@ -20,14 +21,17 @@ export const generateMetadata = async ({
   return {
     title: `${post?.title} - HaruPetShop.vn`,
     description: post.description,
+    icons: {
+      icon: "/favicon.ico",
+    },
     openGraph: {
       title: `${post?.title} - HaruPetShop.vn`,
       description: post.description,
-      url: "https://harupetshop.vn/blogs/7-sai-lam-khi-cham-soc-thu-cung",
+      url: `https://harupetshop.vn/blogs/${post.slug}`,
       type: "article",
       images: [
         {
-          url: "https://harupetshop.vn/images/blog/1.png",
+          url: "https://harupetshop.vn/images/blog/2.jpeg",
           alt: "Thú cưng thừa cân",
         },
       ],
@@ -36,7 +40,7 @@ export const generateMetadata = async ({
       card: "summary_large_image",
       title: `${post?.title} - HaruPetShop.vn`,
       description: post.description,
-      images: ["https://harupetshop.vn/images/blog/1.png"],
+      images: ["https://harupetshop.vn/images/blog/2.jpeg"],
     },
   };
 };
@@ -58,7 +62,7 @@ export default async function BlogDetailPage({
 
   return (
     <div className="mt-5 mx-auto max-w-3xl">
-      <h1 className="text-center text-2xl font-semibold">{post.title}</h1>
+      <h1 className="text-center text-3xl font-semibold">{post.title}</h1>
       <ul className="mt-3 flex flex-col gap-5">
         <li>
           <article>
